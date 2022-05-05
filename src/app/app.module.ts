@@ -18,7 +18,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CdkTableModule } from '@angular/cdk/table';
- 
+
 import { TableFlexBasicExample } from './table-flex-basic/table-flex-basic-example';
 import { TableBasicExample } from './table-basic/table-basic-example';
 import { TableDynamicColumnsExample } from './table-dynamic-columns/table-dynamic-columns-example';
@@ -119,11 +119,13 @@ const EXAMPLES = [
   TableWithRipplesExample,
   TableWrappedExample,
   WrapperTable,
+  AppComponent
 ];
 
 @NgModule({
   imports: [
     CommonModule,
+    BrowserModule,
     MatButtonModule,
     MatButtonToggleModule,
     MatCheckboxModule,
@@ -137,6 +139,7 @@ const EXAMPLES = [
     CdkTableModule,
     DragDropModule,
   ],
-  declarations: EXAMPLES,
+  declarations: [...EXAMPLES],
+  bootstrap : [AppComponent]
 })
 export class TableExamplesModule {}
