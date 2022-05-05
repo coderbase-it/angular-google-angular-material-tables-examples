@@ -54,6 +54,7 @@ import { TableDynamicObservableDataExample } from './table-dynamic-observable-da
 import { TableGeneratedColumnsExample } from './table-generated-columns/table-generated-columns-example';
 import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 export {
   TableBasicExample,
   TableColumnStylingExample,
@@ -139,7 +140,7 @@ const EXAMPLES = [
     MatSortModule,
     MatTableModule,
     MatTabsModule,
-
+    HttpClientModule,
     CdkTableModule,
     DragDropModule,
   ],
