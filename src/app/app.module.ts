@@ -52,7 +52,8 @@ import { TableRowBindingExample } from './table-row-binding/table-row-binding-ex
 import { TableDynamicArrayDataExample } from './table-dynamic-array-data/table-dynamic-array-data-example';
 import { TableDynamicObservableDataExample } from './table-dynamic-observable-data/table-dynamic-observable-data-example';
 import { TableGeneratedColumnsExample } from './table-generated-columns/table-generated-columns-example';
-
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 export {
   TableBasicExample,
   TableColumnStylingExample,
@@ -119,13 +120,14 @@ const EXAMPLES = [
   TableWithRipplesExample,
   TableWrappedExample,
   WrapperTable,
-  AppComponent
+  AppComponent,
 ];
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
+    BrowserAnimationsModule,
     MatButtonModule,
     MatButtonToggleModule,
     MatCheckboxModule,
@@ -136,10 +138,12 @@ const EXAMPLES = [
     MatRippleModule,
     MatSortModule,
     MatTableModule,
+    MatTabsModule,
+
     CdkTableModule,
     DragDropModule,
   ],
   declarations: [...EXAMPLES],
-  bootstrap : [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class TableExamplesModule {}
